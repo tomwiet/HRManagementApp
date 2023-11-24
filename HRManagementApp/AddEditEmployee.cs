@@ -61,7 +61,8 @@ namespace HRManagementApp
 
             
             AddNewEmployeeToList(employees);
-            
+            _fileHelper.SerializeToFile(employees);
+            Close();
 
             
         }
