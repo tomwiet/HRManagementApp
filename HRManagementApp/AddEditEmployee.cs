@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,22 +17,80 @@ namespace HRManagementApp
             new FileHelper<List<Employee>>(Program.FilePath);
 
         private int _employeeId;
+        private Employee _employee;
 
-        public AddEditEmployee()
+        public AddEditEmployee(int Id=0)
         {
             InitializeComponent();
+            _employeeId = Id;
+            GetEmployeesData();
+            
+
+        }
+
+        private void FillEditingForm()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void GetEmployeesData()
+        {
+            if (_employeeId != 0)
+            {
+                //znajdz pradownika z najwiekszym id;
+                if(_employee == null) 
+                {
+                    throw new Exception("Nie ma użytkownika o danym ID");
+                }
+            }
+            
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             var employees = _fileHelper.DeserializeFromFile();
 
-            _employeeId = employees.
 
-            if(employees != null )
+
+            if (_employeeId != 0)
+
+                employees.RemoveAll(x => x.Id == _employeeId);
+            else
+                AssignIdToNewEmployee(employees);
+
+            
+            AddNewEmployeeToList(employees);
+            
+
+            
+        }
+
+        private void AddNewEmployeeToList(List<Employee> employees)
+        {
+            if(!float.TryParse(tbEarnings.Text, out float earnings))
+                earnings = 0;
+
+            var employee = new Employee()
             {
-                //znajdz najwieksze id
-            }
+
+                Id = _employeeId,
+                FitsName = tbFirstname.Text,
+                LastName = tbLastName.Text,
+                EmploymentDate = dtpEmploymentDate.Value,
+                DismissalDate = dtpDismissalDate.Value,
+                Coments = rtbComments.Text,
+                Earnings = earnings
+
+            };
+            employees.Add(employee);
+        }
+
+        private void AssignIdToNewEmployee(List<Employee> employees)
+        {
+            var employeeWithHighestId = employees.OrderByDescending(x=> x.Id).FirstOrDefault();
+            _employeeId = (employeeWithHighestId == null) ? 1 : employeeWithHighestId.Id + 1;
+            
         }
     }
 }

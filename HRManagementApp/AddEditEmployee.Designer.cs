@@ -40,6 +40,8 @@
             this.rtbComments = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.tbEarnings = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,7 +126,7 @@
             // 
             // rtbComments
             // 
-            this.rtbComments.Location = new System.Drawing.Point(26, 113);
+            this.rtbComments.Location = new System.Drawing.Point(26, 161);
             this.rtbComments.Name = "rtbComments";
             this.rtbComments.Size = new System.Drawing.Size(512, 127);
             this.rtbComments.TabIndex = 9;
@@ -133,7 +135,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 94);
+            this.label5.Location = new System.Drawing.Point(23, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 10;
@@ -141,7 +143,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(427, 258);
+            this.btnSave.Location = new System.Drawing.Point(427, 294);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(99, 28);
             this.btnSave.TabIndex = 11;
@@ -149,11 +151,29 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // tbEarnings
+            // 
+            this.tbEarnings.Location = new System.Drawing.Point(94, 94);
+            this.tbEarnings.Name = "tbEarnings";
+            this.tbEarnings.Size = new System.Drawing.Size(171, 22);
+            this.tbEarnings.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(23, 100);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Zarobki";
+            // 
             // AddEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 298);
+            this.ClientSize = new System.Drawing.Size(550, 410);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tbEarnings);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rtbComments);
@@ -185,5 +205,7 @@
         private System.Windows.Forms.RichTextBox rtbComments;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TextBox tbEarnings;
+        private System.Windows.Forms.Label label6;
     }
 }

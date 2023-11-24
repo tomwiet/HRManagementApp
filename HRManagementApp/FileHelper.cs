@@ -16,6 +16,10 @@ namespace HRManagementApp
         {
             _filePath = filePath;
         }
+        public void SerializeToFile(T employes)
+        {
+            
+        }
 
         public T DeserializeFromFile()
         {
