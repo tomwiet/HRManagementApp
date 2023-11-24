@@ -14,6 +14,9 @@ namespace HRManagementApp
     {
         private FileHelper<List<Employee>> _fileHelper =
             new FileHelper<List<Employee>>(Program.FilePath);
+
+        private int _employeeId;
+
         public AddEditEmployee()
         {
             InitializeComponent();
@@ -22,6 +25,13 @@ namespace HRManagementApp
         private void btnSave_Click(object sender, EventArgs e)
         {
             var employees = _fileHelper.DeserializeFromFile();
+
+            _employeeId = employees.
+
+            if(employees != null )
+            {
+                //znajdz najwieksze id
+            }
         }
     }
 }
