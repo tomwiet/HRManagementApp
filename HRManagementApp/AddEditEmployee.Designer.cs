@@ -147,8 +147,9 @@
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Zapisz";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // AdddEditEmployee
+            // AddEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,7 +162,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbFirstname);
             this.Controls.Add(this.label1);
-            this.Name = "AdddEditEmployee";
+            this.Name = "AddEditEmployee";
             this.Text = "AdddEditEmployee";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
