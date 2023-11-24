@@ -25,7 +25,7 @@ namespace HRManagementApp
             }
 
             var jsonText = File.ReadAllText(_filePath);
-           
+
             return JsonConvert.DeserializeObject<T>(jsonText);
         }
     }

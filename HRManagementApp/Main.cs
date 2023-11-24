@@ -12,14 +12,20 @@ namespace HRManagementApp
 {
     public partial class Main : Form
     {
-        private List<Employee> employees;
+        private FileHelper<List<Employee>> _fileHelper =
+            new FileHelper<List<Employee>>(Program.FilePath);
         
         public Main()
         {
             InitializeComponent();
+            //dgvEmployees.DataSource = _fileHelper.DeserializeFromFile();
 
         }
 
-        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddEditEmployee addEditEmployee = new AddEditEmployee();
+            addEditEmployee.ShowDialog();
+        }
     }
 }

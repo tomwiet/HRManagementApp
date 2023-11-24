@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdddEditEmployee.cs">
+    <Compile Include="AddEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdddEditEmployee.Designer.cs">
-      <DependentUpon>AdddEditEmployee.cs</DependentUpon>
+    <Compile Include="AddEditEmployee.Designer.cs">
+      <DependentUpon>AddEditEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="FileHelper.cs" />
@@ -65,8 +65,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdddEditEmployee.resx">
-      <DependentUpon>AdddEditEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="AddEditEmployee.resx">
+      <DependentUpon>AddEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

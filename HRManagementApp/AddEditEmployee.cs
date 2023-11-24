@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HRManagementApp
 {
-    public partial class AdddEditEmployee : Form
+    public partial class AddEditEmployee : Form
     {
-        public AdddEditEmployee()
+        public AddEditEmployee()
         {
             InitializeComponent();
         }
