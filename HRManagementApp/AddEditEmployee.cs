@@ -76,11 +76,11 @@ namespace HRManagementApp
             {
 
                 Id = _employeeId,
-                FitsName = tbFirstname.Text,
+                FirstName = tbFirstname.Text,
                 LastName = tbLastName.Text,
                 EmploymentDate = dtpEmploymentDate.Value,
                 DismissalDate = dtpDismissalDate.Value,
-                Coments = rtbComments.Text,
+                Comments = rtbComments.Text,
                 Earnings = earnings
 
             };
