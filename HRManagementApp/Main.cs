@@ -18,7 +18,7 @@ namespace HRManagementApp
         public Main()
         {
             InitializeComponent();
-            //dgvEmployees.DataSource = _fileHelper.DeserializeFromFile();
+            dgvEmployees.DataSource = _fileHelper.DeserializeFromFile();
 
         }
 

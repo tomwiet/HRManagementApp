@@ -19,7 +19,7 @@ namespace HRManagementApp
         public void SerializeToFile(T employes)
         {
             var jsonText = JsonConvert.SerializeObject(employes);
-            File.WriteAllText(jsonText, _filePath);
+            File.WriteAllText(_filePath, jsonText);
             
         }
 
