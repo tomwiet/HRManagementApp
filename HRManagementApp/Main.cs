@@ -12,9 +12,14 @@ namespace HRManagementApp
 {
     public partial class Main : Form
     {
+        private List<Employee> employees;
+        
         public Main()
         {
             InitializeComponent();
+
         }
+
+        
     }
 }
