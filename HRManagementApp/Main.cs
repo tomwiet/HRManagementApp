@@ -19,12 +19,19 @@ namespace HRManagementApp
         {
             InitializeComponent();
             GetEmployeeData();
-            SetDataViewHeaders();
+            SetDgvHeaders();
+            SetDgvColumns();
             
 
 
         }
-        private void SetDataViewHeaders()
+
+        private void SetDgvColumns()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SetDgvHeaders()
         {
             dgvEmployees.Columns["id"].Visible = false;
             dgvEmployees.Columns["id"].DisplayIndex =0;
