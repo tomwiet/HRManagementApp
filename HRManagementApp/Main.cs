@@ -84,5 +84,24 @@ namespace HRManagementApp
 
         }
 
+        private void btnDismiss_Click(object sender, EventArgs e)
+        {
+            if (dgvEmployees.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Musisz zaznaczyć pracownika do zwolnienia");
+                return;
+            }
+            var selectedEmployeId
+                = (int)dgvEmployees.SelectedRows[0].Cells[0].Value;
+            DismissEmployee dismissEmploye = new DismissEmployee(selectedEmployeId);
+            dismissEmploye.FormClosing += AddEditEmployee_FormClosing;
+            dismissEmploye.ShowDialog();
+
+
+
+
+        }
+
+        
     }
 }

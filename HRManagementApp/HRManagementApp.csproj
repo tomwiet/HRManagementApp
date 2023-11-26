@@ -55,6 +55,12 @@
     <Compile Include="AddEditEmployee.Designer.cs">
       <DependentUpon>AddEditEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="DismissEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DismissEmployee.Designer.cs">
+      <DependentUpon>DismissEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="FileHelper.cs" />
     <Compile Include="Main.cs">
@@ -67,6 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddEditEmployee.resx">
       <DependentUpon>AddEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DismissEmployee.resx">
+      <DependentUpon>DismissEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
