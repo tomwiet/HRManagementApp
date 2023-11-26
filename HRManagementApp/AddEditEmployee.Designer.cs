@@ -34,14 +34,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpEmploymentDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpDismissalDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rtbComments = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.tbEarnings = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblDismissalDate = new System.Windows.Forms.Label();
+            this.dtpDismissalDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,27 +94,10 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Data zatrudnienia";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(138, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Data zwolnienia";
-            // 
-            // dtpDismissalDate
-            // 
-            this.dtpDismissalDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDismissalDate.Location = new System.Drawing.Point(141, 48);
-            this.dtpDismissalDate.Name = "dtpDismissalDate";
-            this.dtpDismissalDate.Size = new System.Drawing.Size(114, 22);
-            this.dtpDismissalDate.TabIndex = 6;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtpEmploymentDate);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lblDismissalDate);
             this.groupBox1.Controls.Add(this.dtpDismissalDate);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(271, 9);
@@ -167,6 +150,25 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Zarobki";
             // 
+            // lblDismissalDate
+            // 
+            this.lblDismissalDate.AutoSize = true;
+            this.lblDismissalDate.Location = new System.Drawing.Point(138, 29);
+            this.lblDismissalDate.Name = "lblDismissalDate";
+            this.lblDismissalDate.Size = new System.Drawing.Size(101, 16);
+            this.lblDismissalDate.TabIndex = 7;
+            this.lblDismissalDate.Text = "Data zwolnienia";
+            // 
+            // dtpDismissalDate
+            // 
+            this.dtpDismissalDate.CustomFormat = " ";
+            this.dtpDismissalDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDismissalDate.Location = new System.Drawing.Point(141, 48);
+            this.dtpDismissalDate.Name = "dtpDismissalDate";
+            this.dtpDismissalDate.Size = new System.Drawing.Size(114, 22);
+            this.dtpDismissalDate.TabIndex = 6;
+            this.dtpDismissalDate.Visible = false;
+            // 
             // AddEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,13 +201,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpEmploymentDate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpDismissalDate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox rtbComments;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox tbEarnings;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblDismissalDate;
+        private System.Windows.Forms.DateTimePicker dtpDismissalDate;
     }
 }

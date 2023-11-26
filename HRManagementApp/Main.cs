@@ -21,9 +21,6 @@ namespace HRManagementApp
             GetEmployeeData();
             SetDgvHeaders();
             SetDgvColumns();
-            
-
-
         }
 
         private void SetDgvColumns()
@@ -86,5 +83,6 @@ namespace HRManagementApp
             editEmployee.ShowDialog();
 
         }
+
     }
 }
