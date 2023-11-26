@@ -29,7 +29,7 @@ namespace HRManagementApp
         {
             var employees = _fileHelper.DeserializeFromFile();
             _employe = employees.FirstOrDefault(x => x.Id == _employeeId);
-            lblEmployeInfo.Text += $" {_employe.FirstName} " +
+            lblEmployeInfo.Text = $" {_employe.FirstName} " +
                 $"{_employe.LastName} " +
                 $"zatrudniony od {_employe.EmploymentDate.ToShortDateString()}"; 
            

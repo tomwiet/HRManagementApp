@@ -33,16 +33,17 @@
             this.btnDismiss = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblDismissDate = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEmployeInfo
             // 
             this.lblEmployeInfo.AutoSize = true;
-            this.lblEmployeInfo.Location = new System.Drawing.Point(51, 17);
+            this.lblEmployeInfo.Location = new System.Drawing.Point(12, 41);
             this.lblEmployeInfo.Name = "lblEmployeInfo";
-            this.lblEmployeInfo.Size = new System.Drawing.Size(151, 16);
+            this.lblEmployeInfo.Size = new System.Drawing.Size(161, 16);
             this.lblEmployeInfo.TabIndex = 0;
-            this.lblEmployeInfo.Text = "Informacje o pracowniku";
+            this.lblEmployeInfo.Text = "{Informacje o pracowniku}";
             // 
             // dtpDissmisDate
             // 
@@ -81,11 +82,22 @@
             this.lblDismissDate.TabIndex = 4;
             this.lblDismissDate.Text = "Data zwolnienia";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(257, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Informacje o zwalnianym pracowniku";
+            // 
             // DismissEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 188);
+            this.ClientSize = new System.Drawing.Size(474, 187);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDismissDate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDismiss);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.Button btnDismiss;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblDismissDate;
+        private System.Windows.Forms.Label label1;
     }
 }
