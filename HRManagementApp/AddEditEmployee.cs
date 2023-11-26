@@ -27,16 +27,19 @@ namespace HRManagementApp
             GetEmployeeData();
             tbFirstname.Select();
             
-
         }
 
         private void FillEditingForm()
         {
-            tbFirstname.Text = _employee.FirstName.Trim();
-            tbLastName.Text = _employee.LastName.Trim();
+
+            if(_employee.FirstName != null)
+                tbFirstname.Text = _employee.FirstName.Trim();
+            if(_employee.LastName != null)
+                tbLastName.Text = _employee.LastName.Trim();
             tbEarnings.Text = _employee.Earnings.ToString().Trim();
             dtpEmploymentDate.Value = _employee.EmploymentDate;
             dtpDismissalDate.Value = _employee.DismissalDate;
+            if(_employee.Comments != null)
             rtbComments.Text = _employee.Comments.Trim();
 
 
@@ -44,6 +47,7 @@ namespace HRManagementApp
 
         private void GetEmployeeData()
         {
+            Text = "Edytuj dane pracownika";
             if (_employeeId != 0)
             {
                 var employes = _fileHelper.DeserializeFromFile();

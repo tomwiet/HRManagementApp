@@ -82,6 +82,7 @@ namespace HRManagementApp
                 = (int) dgvEmployees.SelectedRows[0].Cells[0].Value;
 
             AddEditEmployee editEmployee = new AddEditEmployee(selectedEmployeId);
+            editEmployee.FormClosing += AddEditEmployee_FormClosing;
             editEmployee.ShowDialog();
 
         }
