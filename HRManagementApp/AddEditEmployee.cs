@@ -24,7 +24,7 @@ namespace HRManagementApp
             InitializeComponent();
             Text = "Dodaj pracownika";
             _employeeId = Id;
-            GetEmployeesData();
+            GetEmployeeData();
             tbFirstname.Select();
             
 
@@ -32,19 +32,30 @@ namespace HRManagementApp
 
         private void FillEditingForm()
         {
-            throw new NotImplementedException();
+            tbFirstname.Text = _employee.FirstName.Trim();
+            tbLastName.Text = _employee.LastName.Trim();
+            tbEarnings.Text = _employee.Earnings.ToString().Trim();
+            dtpEmploymentDate.Value = _employee.EmploymentDate;
+            dtpDismissalDate.Value = _employee.DismissalDate;
+            rtbComments.Text = _employee.Comments.Trim();
+
+
         }
 
-        private void GetEmployeesData()
+        private void GetEmployeeData()
         {
             if (_employeeId != 0)
             {
-                //znajdz pradownika z najwiekszym id;
+                var employes = _fileHelper.DeserializeFromFile();
+                _employee = employes.FirstOrDefault(x=>x.Id==_employeeId);
+
                 if(_employee == null) 
                 {
                     throw new Exception("Nie ma użytkownika o danym ID");
                 }
+                FillEditingForm();
             }
+
 
             
             
