@@ -21,20 +21,21 @@ namespace HRManagementApp
             
             InitializeComponent();
             _employeeId = selectedEmployeId;
-            SetDissmisDate();
+            GetEmployeToDismiss();
 
         }
 
-        private void SetDissmisDate()
+        private void GetEmployeToDismiss()
         {
             var employees = _fileHelper.DeserializeFromFile();
             _employe = employees.FirstOrDefault(x => x.Id == _employeeId);
-            _employe.DismissalDate = dtpDissmisDate.Value.Date;
+           
          }
 
         private void btnDismiss_Click(object sender, EventArgs e)
         {
             var employees = _fileHelper.DeserializeFromFile();
+            _employe.DismissalDate = dtpDissmisDate.Value.Date;
             employees.RemoveAll(x => x.Id == _employeeId);
             employees.Add(_employe);
             _fileHelper.SerializeToFile(employees);

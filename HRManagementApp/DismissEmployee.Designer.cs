@@ -46,6 +46,7 @@
             // 
             // dtpDissmisDate
             // 
+            this.dtpDissmisDate.Checked = false;
             this.dtpDissmisDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDissmisDate.Location = new System.Drawing.Point(127, 76);
             this.dtpDissmisDate.Name = "dtpDissmisDate";
