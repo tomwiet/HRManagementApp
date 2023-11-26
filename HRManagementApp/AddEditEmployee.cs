@@ -79,8 +79,8 @@ namespace HRManagementApp
                 Id = _employeeId,
                 FirstName = tbFirstname.Text,
                 LastName = tbLastName.Text,
-                EmploymentDate = dtpEmploymentDate.Value,
-                DismissalDate = dtpDismissalDate.Value,
+                EmploymentDate = dtpEmploymentDate.Value.Date,
+                DismissalDate = dtpDismissalDate.Value.Date,
                 Comments = rtbComments.Text,
                 Earnings = earnings
 

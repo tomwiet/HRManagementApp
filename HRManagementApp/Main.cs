@@ -28,47 +28,45 @@ namespace HRManagementApp
 
         private void SetDgvColumns()
         {
-            throw new NotImplementedException();
+            if(dgvEmployees.Columns["id"].Visible)
+                dgvEmployees.Columns["id"].DisplayIndex = 0; 
+            dgvEmployees.Columns["FirstName"].DisplayIndex = 1;
+            dgvEmployees.Columns["LastName"].DisplayIndex = 2;
+            dgvEmployees.Columns["EmploymentDate"].DisplayIndex = 3;
+            dgvEmployees.Columns["DismissalDate"].DisplayIndex = 4;
+            dgvEmployees.Columns["Earnings"].DisplayIndex = 5;
+            dgvEmployees.Columns["Comments"].DisplayIndex = 6;
         }
 
         private void SetDgvHeaders()
         {
-            dgvEmployees.Columns["id"].Visible = false;
-            dgvEmployees.Columns["id"].DisplayIndex =0;
-
+            dgvEmployees.Columns["id"].Visible = true;
             dgvEmployees.Columns["FirstName"].HeaderText = "Imię";
-            dgvEmployees.Columns["FirstName"].DisplayIndex = 1;
-
             dgvEmployees.Columns["LastName"].HeaderText = "Nazwisko";
-            dgvEmployees.Columns["LastName"].DisplayIndex = 2;
-
-            dgvEmployees.Columns["EmploymentDate"].HeaderText = "Data zatrudnienia";
-            dgvEmployees.Columns["EmploymentDate"].DisplayIndex = 3;
-
+            dgvEmployees.Columns["EmploymentDate"].HeaderText = "Data zatrudnienia";          
             dgvEmployees.Columns["DismissalDate"].HeaderText = "Data zwolnienia";
-            dgvEmployees.Columns["DismissalDate"].DisplayIndex = 4;
-            
             dgvEmployees.Columns["Earnings"].HeaderText = "Zarobki";
-            dgvEmployees.Columns["Earnings"].DisplayIndex = 5;
-            
-            dgvEmployees.Columns["Comments"].HeaderText = "Uwagi";
-            dgvEmployees.Columns["Comments"].DisplayIndex = 6;
-
-
+            dgvEmployees.Columns["Comments"].HeaderText = "Uwagi";           
         }
 
 
         private void GetEmployeeData()
         {
             dgvEmployees.DataSource = 
-                _fileHelper.DeserializeFromFile();
+                _fileHelper.DeserializeFromFile().OrderBy(x=>x.Id).ToList();
 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddEditEmployee addEditEmployee = new AddEditEmployee();
+            addEditEmployee.FormClosing += AddEditEmployee_FormClosing;
             addEditEmployee.ShowDialog();
+        }
+
+        private void AddEditEmployee_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           GetEmployeeData();
         }
     }
 }
