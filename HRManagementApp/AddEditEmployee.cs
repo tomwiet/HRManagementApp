@@ -22,8 +22,10 @@ namespace HRManagementApp
         public AddEditEmployee(int Id=0)
         {
             InitializeComponent();
+            Text = "Dodaj pracownika";
             _employeeId = Id;
             GetEmployeesData();
+            tbFirstname.Select();
             
 
         }
@@ -43,6 +45,7 @@ namespace HRManagementApp
                     throw new Exception("Nie ma użytkownika o danym ID");
                 }
             }
+
             
             
         }

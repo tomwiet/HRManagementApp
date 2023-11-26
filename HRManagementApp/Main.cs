@@ -59,14 +59,31 @@ namespace HRManagementApp
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddEditEmployee addEditEmployee = new AddEditEmployee();
-            addEditEmployee.FormClosing += AddEditEmployee_FormClosing;
-            addEditEmployee.ShowDialog();
+            AddEditEmployee addEmployee = new AddEditEmployee();
+            addEmployee.FormClosing += AddEditEmployee_FormClosing;
+            addEmployee.ShowDialog();
         }
 
         private void AddEditEmployee_FormClosing(object sender, FormClosingEventArgs e)
         {
            GetEmployeeData();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {   
+            
+            
+            if(dgvEmployees.SelectedRows.Count == 0) 
+            {
+                MessageBox.Show("Musisz zaznaczyć pracownika do edycji");
+                return;
+            }
+            var selectedEmployeId 
+                = (int) dgvEmployees.SelectedRows[0].Cells[0].Value;
+
+            AddEditEmployee editEmployee = new AddEditEmployee(selectedEmployeId);
+            editEmployee.ShowDialog();
+
         }
     }
 }
