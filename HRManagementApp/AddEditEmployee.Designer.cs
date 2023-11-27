@@ -35,13 +35,14 @@
             this.dtpEmploymentDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblDismissalDate = new System.Windows.Forms.Label();
+            this.dtpDismissalDate = new System.Windows.Forms.DateTimePicker();
             this.rtbComments = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.tbEarnings = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblDismissalDate = new System.Windows.Forms.Label();
-            this.dtpDismissalDate = new System.Windows.Forms.DateTimePicker();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,6 +108,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Okres zatrudnienia";
             // 
+            // lblDismissalDate
+            // 
+            this.lblDismissalDate.AutoSize = true;
+            this.lblDismissalDate.Location = new System.Drawing.Point(138, 29);
+            this.lblDismissalDate.Name = "lblDismissalDate";
+            this.lblDismissalDate.Size = new System.Drawing.Size(101, 16);
+            this.lblDismissalDate.TabIndex = 7;
+            this.lblDismissalDate.Text = "Data zwolnienia";
+            // 
+            // dtpDismissalDate
+            // 
+            this.dtpDismissalDate.CustomFormat = " ";
+            this.dtpDismissalDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDismissalDate.Location = new System.Drawing.Point(141, 48);
+            this.dtpDismissalDate.Name = "dtpDismissalDate";
+            this.dtpDismissalDate.Size = new System.Drawing.Size(114, 22);
+            this.dtpDismissalDate.TabIndex = 6;
+            this.dtpDismissalDate.Visible = false;
+            // 
             // rtbComments
             // 
             this.rtbComments.Location = new System.Drawing.Point(26, 161);
@@ -126,7 +146,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(427, 294);
+            this.btnSave.Location = new System.Drawing.Point(332, 294);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(99, 28);
             this.btnSave.TabIndex = 11;
@@ -150,30 +170,22 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Zarobki";
             // 
-            // lblDismissalDate
+            // btnCancel
             // 
-            this.lblDismissalDate.AutoSize = true;
-            this.lblDismissalDate.Location = new System.Drawing.Point(138, 29);
-            this.lblDismissalDate.Name = "lblDismissalDate";
-            this.lblDismissalDate.Size = new System.Drawing.Size(101, 16);
-            this.lblDismissalDate.TabIndex = 7;
-            this.lblDismissalDate.Text = "Data zwolnienia";
-            // 
-            // dtpDismissalDate
-            // 
-            this.dtpDismissalDate.CustomFormat = " ";
-            this.dtpDismissalDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDismissalDate.Location = new System.Drawing.Point(141, 48);
-            this.dtpDismissalDate.Name = "dtpDismissalDate";
-            this.dtpDismissalDate.Size = new System.Drawing.Size(114, 22);
-            this.dtpDismissalDate.TabIndex = 6;
-            this.dtpDismissalDate.Visible = false;
+            this.btnCancel.Location = new System.Drawing.Point(439, 294);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(99, 28);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "Anuluj";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // AddEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 410);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbEarnings);
             this.Controls.Add(this.btnSave);
@@ -209,5 +221,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblDismissalDate;
         private System.Windows.Forms.DateTimePicker dtpDismissalDate;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

@@ -56,6 +56,7 @@
             // 
             // btnDismiss
             // 
+            this.btnDismiss.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDismiss.Location = new System.Drawing.Point(86, 123);
             this.btnDismiss.Name = "btnDismiss";
             this.btnDismiss.Size = new System.Drawing.Size(75, 23);
@@ -66,17 +67,19 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancel.Location = new System.Drawing.Point(167, 123);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblDismissDate
             // 
             this.lblDismissDate.AutoSize = true;
-            this.lblDismissDate.Location = new System.Drawing.Point(12, 81);
+            this.lblDismissDate.Location = new System.Drawing.Point(12, 76);
             this.lblDismissDate.Name = "lblDismissDate";
             this.lblDismissDate.Size = new System.Drawing.Size(101, 16);
             this.lblDismissDate.TabIndex = 4;
@@ -96,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 187);
+            this.ClientSize = new System.Drawing.Size(474, 166);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDismissDate);
             this.Controls.Add(this.btnCancel);
