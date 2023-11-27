@@ -22,7 +22,6 @@ namespace HRManagementApp
             SetDgvHeaders();
             SetDgvColumns();
 
-            
         }
 
         private void SetDgvColumns()
@@ -53,7 +52,6 @@ namespace HRManagementApp
         {
             dgvEmployees.DataSource = 
                 _fileHelper.DeserializeFromFile().OrderBy(x=>x.Id).ToList();
-            
 
         }
 
@@ -101,6 +99,15 @@ namespace HRManagementApp
             dismissEmploye.ShowDialog();
         }
 
-        
+        private void dgvEmployees_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvEmployees.SelectedRows.Count == 1)
+            {
+                btnDismiss.Enabled = true;
+                var date = dgvEmployees.SelectedRows[0].Cells[4].Value;
+                if(date != null) btnDismiss.Enabled = false;
+            }
+            
+        }
     }
 }

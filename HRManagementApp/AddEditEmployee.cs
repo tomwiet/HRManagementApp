@@ -76,7 +76,6 @@ namespace HRManagementApp
             if (_employeeId != 0)
                 employees.RemoveAll(x => x.Id == _employeeId);
             else
-                
                 AssignIdToNewEmployee(employees);
                 AddNewEmployeeToList(employees);
                 _fileHelper.SerializeToFile(employees);
@@ -96,7 +95,7 @@ namespace HRManagementApp
                 FirstName = tbFirstname.Text,
                 LastName = tbLastName.Text,
                 EmploymentDate = dtpEmploymentDate.Value.Date,
-                DismissalDate = dtpDismissalDate.Value.Date,
+                DismissalDate = null,
                 Comments = rtbComments.Text,
                 Earnings = earnings
 
