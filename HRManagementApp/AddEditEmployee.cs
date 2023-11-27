@@ -77,8 +77,9 @@ namespace HRManagementApp
                 employees.RemoveAll(x => x.Id == _employeeId);
             else
                 AssignIdToNewEmployee(employees);
-                AddNewEmployeeToList(employees);
-                _fileHelper.SerializeToFile(employees);
+                
+            AddNewEmployeeToList(employees);
+            _fileHelper.SerializeToFile(employees);
 
             Close();
         }

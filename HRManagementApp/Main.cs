@@ -74,16 +74,16 @@ namespace HRManagementApp
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
-        {   
+        {
+            var dgv = tcEmployees.SelectedTab.Controls.OfType<DataGridView>().First();
             
-            
-            if(dgvEmployeesAll.SelectedRows.Count == 0) 
+            if(dgv.SelectedRows.Count == 0) 
             {
                 MessageBox.Show("Musisz zaznaczyć pracownika do edycji");
                 return;
             }
             var selectedEmployeId 
-                = (int) dgvEmployeesAll.SelectedRows[0].Cells[0].Value;
+                = (int) dgv.SelectedRows[0].Cells[0].Value;
 
             AddEditEmployee editEmployee = new AddEditEmployee(selectedEmployeId);
             editEmployee.FormClosing += AddEditEmployee_FormClosing;
@@ -104,11 +104,6 @@ namespace HRManagementApp
             dismissEmploye.FormClosing += AddEditEmployee_FormClosing;
             dismissEmploye.ShowDialog();
         }
-        private void disableDismissButton(DataGridView dgv) 
-        {
-            
-        }
-
         private void dgvEmployeesAll_SelectionChanged(object sender, EventArgs e)
         {
           
