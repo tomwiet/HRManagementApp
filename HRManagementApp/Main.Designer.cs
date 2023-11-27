@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEmployeesAll = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblMainTitle = new System.Windows.Forms.Label();
@@ -41,17 +41,17 @@
             this.btnDismiss = new System.Windows.Forms.Button();
             this.tcEmployees = new System.Windows.Forms.TabControl();
             this.tcpEmployeesActual = new System.Windows.Forms.TabPage();
-            this.tcpEmployeesDismissed = new System.Windows.Forms.TabPage();
-            this.tcpEmployeesAll = new System.Windows.Forms.TabPage();
-            this.dgvEmployeesDissmised = new System.Windows.Forms.DataGridView();
             this.dgvEmpleyedActual = new System.Windows.Forms.DataGridView();
+            this.tcpEmployeesDismissed = new System.Windows.Forms.TabPage();
+            this.dgvEmployeesDissmised = new System.Windows.Forms.DataGridView();
+            this.tcpEmployeesAll = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesAll)).BeginInit();
             this.tcEmployees.SuspendLayout();
             this.tcpEmployeesActual.SuspendLayout();
-            this.tcpEmployeesDismissed.SuspendLayout();
-            this.tcpEmployeesAll.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesDissmised)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleyedActual)).BeginInit();
+            this.tcpEmployeesDismissed.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesDissmised)).BeginInit();
+            this.tcpEmployeesAll.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvEmployeesAll
@@ -62,23 +62,23 @@
             this.dgvEmployeesAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployeesAll.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvEmployeesAll.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployeesAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployeesAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvEmployeesAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployeesAll.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployeesAll.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvEmployeesAll.Location = new System.Drawing.Point(6, 6);
             this.dgvEmployeesAll.MultiSelect = false;
             this.dgvEmployeesAll.Name = "dgvEmployeesAll";
@@ -88,7 +88,7 @@
             this.dgvEmployeesAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployeesAll.Size = new System.Drawing.Size(1115, 380);
             this.dgvEmployeesAll.TabIndex = 0;
-            this.dgvEmployeesAll.SelectionChanged += new System.EventHandler(this.dgvEmployees_SelectionChanged);
+            this.dgvEmployeesAll.SelectionChanged += new System.EventHandler(this.dgvEmployeesAll_SelectionChanged);
             // 
             // btnAdd
             // 
@@ -148,6 +148,7 @@
             this.tcEmployees.SelectedIndex = 0;
             this.tcEmployees.Size = new System.Drawing.Size(1125, 411);
             this.tcEmployees.TabIndex = 5;
+            this.tcEmployees.SelectedIndexChanged += new System.EventHandler(this.tcEmployees_SelectedIndexChanged);
             // 
             // tcpEmployeesActual
             // 
@@ -160,6 +161,41 @@
             this.tcpEmployeesActual.Text = "Aktualni";
             this.tcpEmployeesActual.UseVisualStyleBackColor = true;
             // 
+            // dgvEmpleyedActual
+            // 
+            this.dgvEmpleyedActual.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEmpleyedActual.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpleyedActual.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvEmpleyedActual.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleyedActual.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvEmpleyedActual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmpleyedActual.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvEmpleyedActual.Location = new System.Drawing.Point(1, 1);
+            this.dgvEmpleyedActual.MultiSelect = false;
+            this.dgvEmpleyedActual.Name = "dgvEmpleyedActual";
+            this.dgvEmpleyedActual.ReadOnly = true;
+            this.dgvEmpleyedActual.RowHeadersWidth = 51;
+            this.dgvEmpleyedActual.RowTemplate.Height = 24;
+            this.dgvEmpleyedActual.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpleyedActual.Size = new System.Drawing.Size(1115, 380);
+            this.dgvEmpleyedActual.TabIndex = 1;
+            // 
             // tcpEmployeesDismissed
             // 
             this.tcpEmployeesDismissed.Controls.Add(this.dgvEmployeesDissmised);
@@ -169,6 +205,41 @@
             this.tcpEmployeesDismissed.TabIndex = 2;
             this.tcpEmployeesDismissed.Text = "Zwolnieni";
             this.tcpEmployeesDismissed.UseVisualStyleBackColor = true;
+            // 
+            // dgvEmployeesDissmised
+            // 
+            this.dgvEmployeesDissmised.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEmployeesDissmised.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmployeesDissmised.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvEmployeesDissmised.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployeesDissmised.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvEmployeesDissmised.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployeesDissmised.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvEmployeesDissmised.Location = new System.Drawing.Point(1, 1);
+            this.dgvEmployeesDissmised.MultiSelect = false;
+            this.dgvEmployeesDissmised.Name = "dgvEmployeesDissmised";
+            this.dgvEmployeesDissmised.ReadOnly = true;
+            this.dgvEmployeesDissmised.RowHeadersWidth = 51;
+            this.dgvEmployeesDissmised.RowTemplate.Height = 24;
+            this.dgvEmployeesDissmised.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmployeesDissmised.Size = new System.Drawing.Size(1115, 380);
+            this.dgvEmployeesDissmised.TabIndex = 1;
             // 
             // tcpEmployeesAll
             // 
@@ -180,76 +251,6 @@
             this.tcpEmployeesAll.TabIndex = 0;
             this.tcpEmployeesAll.Text = "Wszyscy";
             this.tcpEmployeesAll.UseVisualStyleBackColor = true;
-            // 
-            // dgvEmployeesDissmised
-            // 
-            this.dgvEmployeesDissmised.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEmployeesDissmised.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEmployeesDissmised.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvEmployeesDissmised.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployeesDissmised.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvEmployeesDissmised.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployeesDissmised.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvEmployeesDissmised.Location = new System.Drawing.Point(1, 1);
-            this.dgvEmployeesDissmised.MultiSelect = false;
-            this.dgvEmployeesDissmised.Name = "dgvEmployeesDissmised";
-            this.dgvEmployeesDissmised.ReadOnly = true;
-            this.dgvEmployeesDissmised.RowHeadersWidth = 51;
-            this.dgvEmployeesDissmised.RowTemplate.Height = 24;
-            this.dgvEmployeesDissmised.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployeesDissmised.Size = new System.Drawing.Size(1115, 380);
-            this.dgvEmployeesDissmised.TabIndex = 1;
-            // 
-            // dgvEmpleyedActual
-            // 
-            this.dgvEmpleyedActual.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEmpleyedActual.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEmpleyedActual.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvEmpleyedActual.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleyedActual.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvEmpleyedActual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmpleyedActual.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvEmpleyedActual.Location = new System.Drawing.Point(1, 1);
-            this.dgvEmpleyedActual.MultiSelect = false;
-            this.dgvEmpleyedActual.Name = "dgvEmpleyedActual";
-            this.dgvEmpleyedActual.ReadOnly = true;
-            this.dgvEmpleyedActual.RowHeadersWidth = 51;
-            this.dgvEmpleyedActual.RowTemplate.Height = 24;
-            this.dgvEmpleyedActual.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleyedActual.Size = new System.Drawing.Size(1115, 380);
-            this.dgvEmpleyedActual.TabIndex = 1;
             // 
             // Main
             // 
@@ -266,10 +267,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesAll)).EndInit();
             this.tcEmployees.ResumeLayout(false);
             this.tcpEmployeesActual.ResumeLayout(false);
-            this.tcpEmployeesDismissed.ResumeLayout(false);
-            this.tcpEmployeesAll.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesDissmised)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleyedActual)).EndInit();
+            this.tcpEmployeesDismissed.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesDissmised)).EndInit();
+            this.tcpEmployeesAll.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

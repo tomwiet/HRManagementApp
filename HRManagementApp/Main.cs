@@ -54,8 +54,10 @@ namespace HRManagementApp
             dgvEmployeesAll.DataSource = 
                 employees.OrderBy(x=>x.Id).ToList();
 
-            dgvEmpleyedActual.DataSource 
-                = employees.Select(x => x.DismissalDate == null).ToList();
+            dgvEmpleyedActual.DataSource
+                = employees.FindAll(x => x.DismissalDate == null).OrderBy(x => x.Id).ToList();
+            dgvEmployeesDissmised.DataSource =
+                employees.FindAll(x => x.DismissalDate != null).OrderBy(x => x.Id).ToList();
 
         }
 
@@ -102,16 +104,28 @@ namespace HRManagementApp
             dismissEmploye.FormClosing += AddEditEmployee_FormClosing;
             dismissEmploye.ShowDialog();
         }
-
-        private void dgvEmployees_SelectionChanged(object sender, EventArgs e)
+        private void disableDismissButton(DataGridView dgv) 
         {
-            if (dgvEmployeesAll.SelectedRows.Count == 1)
-            {
-                btnDismiss.Enabled = true;
-                var date = dgvEmployeesAll.SelectedRows[0].Cells[4].Value;
-                if(date != null) btnDismiss.Enabled = false;
-            }
             
+        }
+
+        private void dgvEmployeesAll_SelectionChanged(object sender, EventArgs e)
+        {
+          
+                if (dgvEmployeesAll.SelectedRows.Count == 1)
+                {
+                    btnDismiss.Enabled = true;
+                    var date = dgvEmployeesAll.SelectedRows[0].Cells[4].Value;
+                    if (date != null) btnDismiss.Enabled = false;
+                }
+            
+        }
+
+        private void tcEmployees_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnDismiss.Enabled = true;
+            if (tcEmployees.SelectedIndex == 1)
+                btnDismiss.Enabled = false;
         }
     }
 }
