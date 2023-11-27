@@ -33,10 +33,20 @@ namespace HRManagementApp
         {
             if (_employee.FirstName != null)
                 tbFirstname.Text = _employee.FirstName.Trim();
+            
             if (_employee.LastName != null)
                 tbLastName.Text = _employee.LastName.Trim();
+            
             tbEarnings.Text = _employee.Earnings.ToString().Trim();
+            
             dtpEmploymentDate.Value = _employee.EmploymentDate;
+            
+            if(_employee.DismissalDate != null)
+            {
+                dtpDismissalDate.Visible = true;
+                dtpDismissalDate.Value = (DateTime)_employee.DismissalDate;
+            }
+
             if (_employee.Comments != null)
                 rtbComments.Text = _employee.Comments.Trim();
         }
@@ -86,7 +96,7 @@ namespace HRManagementApp
                 FirstName = tbFirstname.Text,
                 LastName = tbLastName.Text,
                 EmploymentDate = dtpEmploymentDate.Value.Date,
-                DismissalDate = null,
+                DismissalDate = dtpDismissalDate.Value.Date,
                 Comments = rtbComments.Text,
                 Earnings = earnings
 

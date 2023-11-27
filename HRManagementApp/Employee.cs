@@ -12,7 +12,7 @@ namespace HRManagementApp
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime EmploymentDate { get; set; }
-        public DateTime? DismissalDate { get; set; }
+        public DateTime? DismissalDate { get; set; } = null;
         public float Earnings { get; set; }
         public string Comments {  get; set; }
 

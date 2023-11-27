@@ -37,11 +37,21 @@ namespace HRManagementApp
 
         private void btnDismiss_Click(object sender, EventArgs e)
         {
-            var employees = _fileHelper.DeserializeFromFile();
-            _employe.DismissalDate = dtpDissmisDate.Value.Date;
-            employees.RemoveAll(x => x.Id == _employeeId);
-            employees.Add(_employe);
-            _fileHelper.SerializeToFile(employees);
+            var desicion = MessageBox.Show($"Zamierzasz zwolnić pracownika: " +
+                $"{_employe.FirstName} " +
+                $"{_employe.LastName} \n" +
+                $"Jesteś pewien?",
+                "Zwolnij prcownika",MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning);
+            if (desicion == DialogResult.OK)
+            {
+                var employees = _fileHelper.DeserializeFromFile();
+                _employe.DismissalDate = dtpDissmisDate.Value.Date;
+                employees.RemoveAll(x => x.Id == _employeeId);
+                employees.Add(_employe);
+                _fileHelper.SerializeToFile(employees);
+            }
+            
             Close();
         }
 
