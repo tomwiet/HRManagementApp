@@ -21,6 +21,8 @@ namespace HRManagementApp
             GetEmployeeData();
             SetDgvHeaders();
             SetDgvColumns();
+
+            
         }
 
         private void SetDgvColumns()
@@ -51,6 +53,7 @@ namespace HRManagementApp
         {
             dgvEmployees.DataSource = 
                 _fileHelper.DeserializeFromFile().OrderBy(x=>x.Id).ToList();
+            
 
         }
 
@@ -96,10 +99,6 @@ namespace HRManagementApp
             DismissEmployee dismissEmploye = new DismissEmployee(selectedEmployeId);
             dismissEmploye.FormClosing += AddEditEmployee_FormClosing;
             dismissEmploye.ShowDialog();
-
-
-
-
         }
 
         
