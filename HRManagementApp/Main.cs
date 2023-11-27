@@ -73,17 +73,29 @@ namespace HRManagementApp
            GetEmployeeData();
         }
 
+        //private int GetSelectedEmloyeeID()
+        //{
+        //    var dgv = tcEmployees.SelectedTab.Controls.OfType<DataGridView>().First();
+
+        //    if (dgv.SelectedRows.Count == 0)
+        //    {
+        //        MessageBox.Show("Musisz zaznaczyć pracownika do edycji");
+        //    }
+            
+        //        return (int)dgv.SelectedRows[0].Cells[0].Value;
+        //}
         private void btnEdit_Click(object sender, EventArgs e)
         {
             var dgv = tcEmployees.SelectedTab.Controls.OfType<DataGridView>().First();
-            
-            if(dgv.SelectedRows.Count == 0) 
+
+            if (dgv.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Musisz zaznaczyć pracownika do edycji");
                 return;
             }
-            var selectedEmployeId 
-                = (int) dgv.SelectedRows[0].Cells[0].Value;
+            var selectedEmployeId
+                = (int)dgv.SelectedRows[0].Cells[0].Value;
+
 
             AddEditEmployee editEmployee = new AddEditEmployee(selectedEmployeId);
             editEmployee.FormClosing += AddEditEmployee_FormClosing;
@@ -93,13 +105,16 @@ namespace HRManagementApp
 
         private void btnDismiss_Click(object sender, EventArgs e)
         {
-            if (dgvEmployeesAll.SelectedRows.Count == 0)
+            var dgv = tcEmployees.SelectedTab.Controls.OfType<DataGridView>().First();
+            
+            if (dgv.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Musisz zaznaczyć pracownika do zwolnienia");
                 return;
             }
             var selectedEmployeId
-                = (int)dgvEmployeesAll.SelectedRows[0].Cells[0].Value;
+                = (int)dgv.SelectedRows[0].Cells[0].Value;
+            
             DismissEmployee dismissEmploye = new DismissEmployee(selectedEmployeId);
             dismissEmploye.FormClosing += AddEditEmployee_FormClosing;
             dismissEmploye.ShowDialog();
