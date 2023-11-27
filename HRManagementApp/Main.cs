@@ -26,32 +26,36 @@ namespace HRManagementApp
 
         private void SetDgvColumns()
         {
-            if(dgvEmployees.Columns["id"].Visible)
-                dgvEmployees.Columns["id"].DisplayIndex = 0; 
-            dgvEmployees.Columns["FirstName"].DisplayIndex = 1;
-            dgvEmployees.Columns["LastName"].DisplayIndex = 2;
-            dgvEmployees.Columns["EmploymentDate"].DisplayIndex = 3;
-            dgvEmployees.Columns["DismissalDate"].DisplayIndex = 4;
-            dgvEmployees.Columns["Earnings"].DisplayIndex = 5;
-            dgvEmployees.Columns["Comments"].DisplayIndex = 6;
+            if(dgvEmployeesAll.Columns["id"].Visible)
+                dgvEmployeesAll.Columns["id"].DisplayIndex = 0; 
+            dgvEmployeesAll.Columns["FirstName"].DisplayIndex = 1;
+            dgvEmployeesAll.Columns["LastName"].DisplayIndex = 2;
+            dgvEmployeesAll.Columns["EmploymentDate"].DisplayIndex = 3;
+            dgvEmployeesAll.Columns["DismissalDate"].DisplayIndex = 4;
+            dgvEmployeesAll.Columns["Earnings"].DisplayIndex = 5;
+            dgvEmployeesAll.Columns["Comments"].DisplayIndex = 6;
         }
 
         private void SetDgvHeaders()
         {
-            dgvEmployees.Columns["id"].Visible = true;
-            dgvEmployees.Columns["FirstName"].HeaderText = "Imię";
-            dgvEmployees.Columns["LastName"].HeaderText = "Nazwisko";
-            dgvEmployees.Columns["EmploymentDate"].HeaderText = "Data zatrudnienia";          
-            dgvEmployees.Columns["DismissalDate"].HeaderText = "Data zwolnienia";
-            dgvEmployees.Columns["Earnings"].HeaderText = "Zarobki";
-            dgvEmployees.Columns["Comments"].HeaderText = "Uwagi";           
+            dgvEmployeesAll.Columns["id"].Visible = false;
+            dgvEmployeesAll.Columns["FirstName"].HeaderText = "Imię";
+            dgvEmployeesAll.Columns["LastName"].HeaderText = "Nazwisko";
+            dgvEmployeesAll.Columns["EmploymentDate"].HeaderText = "Data zatrudnienia";          
+            dgvEmployeesAll.Columns["DismissalDate"].HeaderText = "Data zwolnienia";
+            dgvEmployeesAll.Columns["Earnings"].HeaderText = "Zarobki";
+            dgvEmployeesAll.Columns["Comments"].HeaderText = "Uwagi";           
         }
 
 
         private void GetEmployeeData()
         {
-            dgvEmployees.DataSource = 
-                _fileHelper.DeserializeFromFile().OrderBy(x=>x.Id).ToList();
+            var employees = _fileHelper.DeserializeFromFile();
+            dgvEmployeesAll.DataSource = 
+                employees.OrderBy(x=>x.Id).ToList();
+
+            dgvEmpleyedActual.DataSource 
+                = employees.Select(x => x.DismissalDate == null).ToList();
 
         }
 
@@ -71,13 +75,13 @@ namespace HRManagementApp
         {   
             
             
-            if(dgvEmployees.SelectedRows.Count == 0) 
+            if(dgvEmployeesAll.SelectedRows.Count == 0) 
             {
                 MessageBox.Show("Musisz zaznaczyć pracownika do edycji");
                 return;
             }
             var selectedEmployeId 
-                = (int) dgvEmployees.SelectedRows[0].Cells[0].Value;
+                = (int) dgvEmployeesAll.SelectedRows[0].Cells[0].Value;
 
             AddEditEmployee editEmployee = new AddEditEmployee(selectedEmployeId);
             editEmployee.FormClosing += AddEditEmployee_FormClosing;
@@ -87,13 +91,13 @@ namespace HRManagementApp
 
         private void btnDismiss_Click(object sender, EventArgs e)
         {
-            if (dgvEmployees.SelectedRows.Count == 0)
+            if (dgvEmployeesAll.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Musisz zaznaczyć pracownika do zwolnienia");
                 return;
             }
             var selectedEmployeId
-                = (int)dgvEmployees.SelectedRows[0].Cells[0].Value;
+                = (int)dgvEmployeesAll.SelectedRows[0].Cells[0].Value;
             DismissEmployee dismissEmploye = new DismissEmployee(selectedEmployeId);
             dismissEmploye.FormClosing += AddEditEmployee_FormClosing;
             dismissEmploye.ShowDialog();
@@ -101,10 +105,10 @@ namespace HRManagementApp
 
         private void dgvEmployees_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvEmployees.SelectedRows.Count == 1)
+            if (dgvEmployeesAll.SelectedRows.Count == 1)
             {
                 btnDismiss.Enabled = true;
-                var date = dgvEmployees.SelectedRows[0].Cells[4].Value;
+                var date = dgvEmployeesAll.SelectedRows[0].Cells[4].Value;
                 if(date != null) btnDismiss.Enabled = false;
             }
             
