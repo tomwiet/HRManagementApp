@@ -34,25 +34,25 @@ namespace HRManagementApp
         private void SetDgvColumns(DataGridView dgv)
         {
            
-            if (dgv.Columns["id"].Visible)
-                dgv.Columns["id"].DisplayIndex = 0; 
-            dgv.Columns["FirstName"].DisplayIndex = 1;
-            dgv.Columns["LastName"].DisplayIndex = 2;
-            dgv.Columns["EmploymentDate"].DisplayIndex = 3;
-            dgv.Columns["DismissalDate"].DisplayIndex = 4;
-            dgv.Columns["Earnings"].DisplayIndex = 5;
-            dgv.Columns["Comments"].DisplayIndex = 6;
+            if (dgv.Columns[nameof(Employee.Id)].Visible)
+                dgv.Columns[nameof(Employee.Id)].DisplayIndex = 0; 
+            dgv.Columns[nameof(Employee.FirstName)].DisplayIndex = 1;
+            dgv.Columns[nameof(Employee.LastName)].DisplayIndex = 2;
+            dgv.Columns[nameof(Employee.EmploymentDate)].DisplayIndex = 3;
+            dgv.Columns[nameof(Employee.DismissalDate)].DisplayIndex = 4;
+            dgv.Columns[nameof(Employee.Earnings)].DisplayIndex = 5;
+            dgv.Columns[nameof(Employee.Comments)].DisplayIndex = 6;
         }
 
         private void SetDgvHeaders(DataGridView dgv)
         {
-            dgv.Columns["id"].Visible = false;
-            dgv.Columns["FirstName"].HeaderText = "Imię";
-            dgv.Columns["LastName"].HeaderText = "Nazwisko";
-            dgv.Columns["EmploymentDate"].HeaderText = "Data zatrudnienia";          
-            dgv.Columns["DismissalDate"].HeaderText = "Data zwolnienia";
-            dgv.Columns["Earnings"].HeaderText = "Zarobki";
-            dgv.Columns["Comments"].HeaderText = "Uwagi";           
+            dgv.Columns[nameof(Employee.Id)].Visible = false;
+            dgv.Columns[nameof(Employee.FirstName)].HeaderText = "Imię";
+            dgv.Columns[nameof(Employee.LastName)].HeaderText = "Nazwisko";
+            dgv.Columns[nameof(Employee.EmploymentDate)].HeaderText = "Data zatrudnienia";          
+            dgv.Columns[nameof(Employee.DismissalDate)].HeaderText = "Data zwolnienia";
+            dgv.Columns[nameof(Employee.Earnings)].HeaderText = "Zarobki";
+            dgv.Columns[nameof(Employee.Comments)].HeaderText = "Uwagi";           
         }
 
 
@@ -64,6 +64,7 @@ namespace HRManagementApp
 
             dgvEmployeesActual.DataSource
                 = employees.FindAll(x => x.DismissalDate == null).OrderBy(x => x.Id).ToList();
+            
             dgvEmployeesDissmised.DataSource =
                 employees.FindAll(x => x.DismissalDate != null).OrderBy(x => x.Id).ToList();
 
