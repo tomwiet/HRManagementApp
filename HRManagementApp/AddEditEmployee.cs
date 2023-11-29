@@ -88,7 +88,7 @@ namespace HRManagementApp
         {
             if (!float.TryParse(tbEarnings.Text, out float earnings))
                 earnings = 0;
-
+            
             var employee = new Employee()
             {
 
@@ -101,6 +101,10 @@ namespace HRManagementApp
                 Earnings = earnings
 
             };
+
+            if(dtpDismissalDate.Visible) 
+                employee.DismissalDate = dtpDismissalDate.Value.Date;
+            
             employees.Add(employee);
         }
 
