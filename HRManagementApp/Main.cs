@@ -80,32 +80,26 @@ namespace HRManagementApp
         {
            GetEmployeeData();
         }
-
-        //private int GetSelectedEmloyeeID()
-        //{
-        //    var dgv = tcEmployees.SelectedTab.Controls.OfType<DataGridView>().First();
-
-        //    if (dgv.SelectedRows.Count == 0)
-        //    {
-        //        MessageBox.Show("Musisz zaznaczyć pracownika do edycji");
-        //    }
-            
-        //        return (int)dgv.SelectedRows[0].Cells[0].Value;
-        //}
-        private void btnEdit_Click(object sender, EventArgs e)
+        private int? GetSelectedEmployeId(string nothingSelectedMessage)
         {
             var dgv = tcEmployees.SelectedTab.Controls.OfType<DataGridView>().First();
 
             if (dgv.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Musisz zaznaczyć pracownika do edycji");
-                return;
+                MessageBox.Show(nothingSelectedMessage);
+                return null;
             }
-            var selectedEmployeId
-                = (int)dgv.SelectedRows[0].Cells[0].Value;
+            
+                return (int)dgv.SelectedRows[0].Cells[0].Value;
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            var selectedEmployeId = GetSelectedEmployeId("Musisz zaznaczyć pracownika do edycji");
 
+            if (selectedEmployeId == null)
+                return;
 
-            AddEditEmployee editEmployee = new AddEditEmployee(selectedEmployeId);
+            AddEditEmployee editEmployee = new AddEditEmployee((int)selectedEmployeId);
             editEmployee.FormClosing += AddEditEmployee_FormClosing;
             editEmployee.ShowDialog();
 
@@ -113,17 +107,13 @@ namespace HRManagementApp
 
         private void btnDismiss_Click(object sender, EventArgs e)
         {
-            var dgv = tcEmployees.SelectedTab.Controls.OfType<DataGridView>().First();
-            
-            if (dgv.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Musisz zaznaczyć pracownika do zwolnienia");
+
+            var selectedEmployeId = GetSelectedEmployeId("Musisz zaznaczyć pracownika do zwolnienia");
+
+            if(selectedEmployeId == null) 
                 return;
-            }
-            var selectedEmployeId
-                = (int)dgv.SelectedRows[0].Cells[0].Value;
             
-            DismissEmployee dismissEmploye = new DismissEmployee(selectedEmployeId);
+            DismissEmployee dismissEmploye = new DismissEmployee((int)selectedEmployeId);
             dismissEmploye.FormClosing += AddEditEmployee_FormClosing;
             dismissEmploye.ShowDialog();
         }
